@@ -1,0 +1,47 @@
+<section class="custom-product-grid" style="background:#fff; padding:36px 0 40px 0;">
+  <div style="max-width:960px; margin:0 auto; border:2px solid #1591e8; border-radius:8px;">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,1fr); gap:0;">
+      {% for block in section.blocks %}
+        <div style="border-bottom:{% if forloop.index <= 3 %}1px solid #1591e8;{% else %}none;{% endif %}{% if forloop.index0 != 2 and forloop.index0 != 5 %} border-right:1px solid #1591e8;{% endif %}">
+          {% if block.settings.image %}
+ <img 
+  src="{{ block.settings.image | image_url: '400x400' }}" 
+  alt="" 
+  width="400" height="400"
+  style="object-fit:cover; width:100%; aspect-ratio:1/1;">
+
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Grid",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Grid Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Grid Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Grid (Figma Match)",
+      "blocks": [
+        {"type": "image"}, {"type": "image"}, {"type": "image"},
+        {"type": "image"}, {"type": "image"}, {"type": "image"}
+      ]
+    }
+  ]
+}
+{% endschema %}
