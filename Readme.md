@@ -6,12 +6,12 @@ The task was to create custom Shopify theme sections based on provided Figma des
 
 ## Custom Section Descriptions
 
-### Banner Section (`banner.liquid`)
+### Banner Section 
 - Displays a promotional banner with editable heading, subheading, button text, and link.
 - Fully built from scratch with Liquid schema for dynamic content editing.
 - Includes CSS styling and vanilla JavaScript for button hover animations.
 
-### Product Grid Section (`product-grid.liquid`)
+### Product Grid Section
 - Shows a grid of up to 6 selectable products.
 - Each product displays image, title, price, and links to its page.
 - Configured using blocks in the Liquid schema for easy product selection from admin.
