@@ -28,7 +28,6 @@ The task was to create custom Shopify theme sections based on provided Figma des
 
 - Restarted Shopify CLI multiple times to ensure theme changes were synced.
 - Cleared browser cache and used incognito mode to avoid stale data in theme editor.
-- Verified exact file names and paths (`sections/banner.liquid`, `sections/product-grid.liquid`).
 - Validated JSON schema with online validators to prevent syntax errors.
 - Despite correct code and schema, custom sections did not appear in Shopify theme editor due to an unknown issue.
 
